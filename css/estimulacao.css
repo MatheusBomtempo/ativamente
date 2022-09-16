@@ -1,0 +1,233 @@
+:root{
+    --blue:#00b8b8;
+    --orange:#FF914C;
+    --black:#333;
+    --white:#fff;
+    --gray:#7A7A7A;
+    --light-color:#666;
+    --light-bg:#eee;
+    --border:.2rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+ }
+
+
+.home2 {
+
+    background-color: var(--light-bg);
+    
+}
+
+.home2 .titulos{
+    margin-top: 40px;
+}
+
+
+.home2 img{
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+
+ 
+ .home2 .box-container .box{
+    background-color: var(--white);
+    margin: 3rem 0;
+    padding:5rem;
+    border-radius: .5rem;
+    text-align: justify;
+    box-shadow: var(--box-shadow);
+ }
+ 
+ .home2 .box-container .box .box-text{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    padding: 10px;
+ }
+ 
+ .home2 .box-container .box img{
+    align-content: center;
+    max-height: 33rem;
+    max-width: 100%;
+    margin:1rem 0;
+    padding: 0;
+ }
+ 
+ .home2 .box-container .box h3{
+    font-size: 3.6rem;
+    font-weight: 600;
+    color:var(--light-color);
+    margin:0.5rem 0 2.5rem 0;
+    text-align: center;
+    text-transform: none;
+ 
+ }
+ 
+ .home2 .box-container .box p{
+    font-size: 1.8rem;
+    color:var(--light-color);
+    line-height: 2.3;
+    padding: 15px 10px 29px 10px;
+ }
+
+ .home2 .box-container .box ul{
+   padding: 0px 60px 30px 60px;
+ }
+
+ .home2 .box-container .box ul li{
+   font-size: 1.6rem;
+    color:var(--light-color);
+    line-height: 1.3;
+    text-align: justify;
+    padding: 10px 2px;
+ }
+
+ .home2 .box-container .box ul li span{
+   font-weight: 800;
+ }
+
+ .home2 .botoes{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+ }
+
+
+@media (max-width:1200px){
+
+    
+   
+    .home2::before{   
+          content: "";
+          background-image: none;
+        
+    }
+
+
+    .home2 .box-container .box .box-text{
+     
+        flex-wrap: wrap;
+        
+     }
+    
+ 
+  
+
+    }
+
+
+
+    @media (max-width:991px){
+
+        html{
+           font-size: 55%;
+        }
+     
+        .header .link-btn{
+           display: none;
+        }
+     
+        section{
+           padding:5rem 2rem;
+        }
+     
+        #menu-btn{
+           display: inline-block;
+           transition: .4s linear;
+        }
+     
+        #menu-btn.fa-times{
+           transform: rotate(180deg);
+        }
+     
+        .header .nav{
+           position: absolute;
+           top:99%; left:0; right:0;
+           background-color: var(--white);
+           border-top: var(--border);
+           border-bottom: var(--border);
+           padding:1rem 0;
+           text-align: center;
+           flex-flow: column;
+           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+           transition: .4s linear;
+        }
+     
+        .header .nav.active{
+           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+     
+        .header .nav a{
+           margin:1rem 0;
+           font-size: 2rem;
+        }
+     
+     }
+
+
+    @media (max-width:768px){
+
+        .home2 .titulos{
+            margin-top: 60px;
+        }
+
+        .home2 .box-container .box p{
+         font-size: 1.5rem;
+
+         }
+
+    }
+
+
+    @media (max-width:450px){
+
+        html{
+           font-size: 50%;
+        }
+     
+        .home2 .content h3{
+           font-size: 4rem;
+        }
+     
+        .heading{
+           font-size: 3rem;
+        }
+     
+        #menu-btn{
+           margin-right: 2rem;
+        }
+     
+        .header #logo1{
+           margin-left: 2rem;
+           width: 29px;
+     
+        }
+        
+        .header #logo2{
+           display: none;
+        }
+
+
+        .home2 .box-container .box .box-text{
+
+            padding: 0px;
+         }
+
+         .home2 .box-container .box{
+            margin: 3rem 0;
+            padding:3rem
+         }
+
+        
+
+         .home2 .link-btn{
+            padding:1rem 1.8rem;
+         }
+
+         .home2 .titulos{
+            margin-top: 40px;
+        }
+    }
