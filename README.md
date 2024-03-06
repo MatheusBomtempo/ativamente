@@ -31,7 +31,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ❤️ pela equipe do Espaço Ativamente.
+Feito por @mfbomt.
 
  
  www.espacoativamente.com
