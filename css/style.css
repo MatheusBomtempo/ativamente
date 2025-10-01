@@ -1,4 +1,4 @@
-@charset "UTF-8";
+ @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
@@ -315,33 +315,113 @@ section{
    z-index: 2;
 }
  
-.about .card-image1{
+.about .card-image1 {
    align-content: center;
    width: 650px;
-   background: url("/imagens.nova/claudia7.jpg");
+   background: url("/imagens.nova/cla1.png");
    color: transparent;
-   height: 150px;
+   width: 100%;
+   height: 190px;
+   background-position: center;
  }
 
  .about .card-image2 {
    width: 650px;
-   background: url("/imagens.nova/elisangela3.jpg");
+   background: url("/imagens.nova/lari.png");
    color: transparent;
-   height: 150px;
+   width: 100%;
+   height: 190px;
+   background-position: center;
  }
 
  .about .card-image3 {
    width: 650px;
-   background: url("/imagens.nova/leticia3.jpg");
+   background: url("/imagens.nova/let3.png");
    color: transparent;
-   height: 150px;
+   width: 100%;
+   height: 190px;
+   background-position: center;
  }
 
  .about .card-image4 {
    width: 650px;
-   background: url("/imagens.nova/adriana4.jpg");
+   background: url("/imagens.nova/math.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image5 {
+   background: url("/imagens.nova/gusta.png");
    color: transparent;
    height: 150px;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image6 {
+   width: 650px;
+   background: url("/imagens.nova/rafaela.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image7 {
+   width: 650px;
+   background: url("/imagens.nova/gusta.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image8 {
+   width: 650px;
+   background: url("/imagens.nova/camila.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image9 {
+   width: 650px;
+   background: url("/imagens.nova/Fabiana.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image10 {
+   width: 650px;
+   background: url("/imagens.nova/bianca.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image11 {
+   width: 650px;
+   background: url("/imagens.nova/lili2.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
+ }
+
+ .about .card-image12 {
+   width: 650px;
+   background: url("/imagens.nova/igre.png");
+   color: transparent;
+   width: 100%;
+   height: 190px;
+   background-position: center;
  }
  
  .about .card-desc {
