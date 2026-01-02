@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room - Barbacena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff6b6b;
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 107, 107, 0.8), 0 0 40px rgba(255, 107, 107, 0.6);
+            }
+        }
+
+        .tagline {
+            font-size: 1.8em;
+            color: #ffd93d;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #c44569 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.3em;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            margin: 20px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .description {
+            font-size: 1.3em;
+            margin: 30px 0;
+            color: #c8c8c8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #ffd93d 0%, #fcbf49 100%);
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.4em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(255, 217, 61, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(255, 217, 61, 0.6);
+            background: linear-gradient(135deg, #fcbf49 0%, #ffd93d 100%);
+        }
+
+        .features-section {
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #ff6b6b;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(196, 69, 105, 0.1) 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.3);
+            border-color: rgba(255, 107, 107, 0.6);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            color: #ffd93d;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #c8c8c8;
+            font-size: 1.1em;
+        }
+
+        .highlight {
+            color: #ffd93d;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.3em;
+            }
+
+            .location-badge {
+                font-size: 1.1em;
+            }
+
+            .description {
+                font-size: 1.1em;
+            }
+
+            .cta-button {
+                font-size: 1.2em;
+                padding: 15px 35px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        .scroll-indicator::after {
+            content: '↓';
+            font-size: 2em;
+            color: #ffd93d;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🔐 ESCAPE ROOM</h1>
+            <p class="tagline">Desvende Mistérios. Desafie sua Mente.</p>
+            <span class="location-badge">📍 Barbacena</span>
+            
+            <p class="description">
+                Viva uma experiência única e emocionante! Reúna seus amigos, 
+                trabalhe em equipe e escape antes que o tempo acabe. 
+                A primeira <span class="highlight">escape room em Barbacena</span> 
+                está chegando!
+            </p>
+
+            <a href="pre-cadastro.html" class="cta-button">
+                🎯 Pré-Cadastro Gratuito
+            </a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Por que você vai amar?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Enigmas Desafiadores</h3>
+                    <p>Quebra-cabeças únicos que vão testar sua criatividade e raciocínio lógico</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">👥</div>
+                    <h3>Diversão em Grupo</h3>
+                    <p>Ideal para famílias, amigos ou eventos corporativos. Trabalho em equipe é essencial!</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Adrenalina Pura</h3>
+                    <p>60 minutos de tensão e emoção. Cada segundo conta para desvendar o mistério</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Cenários Imersivos</h3>
+                    <p>Ambientes cuidadosamente decorados que transportam você para outra realidade</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Promoções Exclusivas</h3>
+                    <p>Cadastre-se gratuitamente e receba ofertas especiais de lançamento</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">📍</div>
+                    <h3>Aqui em Barbacena</h3>
+                    <p>Diversão sem precisar viajar! A melhor experiência de escape room da região</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="pre-cadastro.html" class="cta-button">
+                    🚀 Garantir Meu Pré-Cadastro
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>🔐 Escape Room - <span class="location-badge" style="font-size: 0.9em; padding: 5px 15px;">Barbacena</span></p>
+        <p style="margin-top: 10px;">© 2024 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
